@@ -1,38 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Inicio Sesion</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title size="large" class="custom-title ion-text-center">JuMarket</ion-title>
-    </ion-toolbar>
-  </ion-header>  
-
+<ion-content>
   <div class="ion-padding">
     <h1>Bienvenido</h1>
-
-    <h2>Iniciar Sesion</h2>
-    <img
-      alt="Imagen"
-      src=""
-    />
+    <h2>Iniciar Sesión</h2>
     <ion-card class="ion-text-center">
-      <ion-item>
-        <ion-input label="Email" type="email" placeholder="email@domain.com"></ion-input>
-      </ion-item> 
-      <ion-item>
-        <ion-input label="Contraseña" type="password" value="0000" maxlength="4"></ion-input>      
-      </ion-item>
-        <ion-button expand="block">Login</ion-button>
-        <ion-button fill="clear" routerLink="/register">Registrar</ion-button>
-        <ion-button fill="clear" routerLink="/forgot">Olvide Contraseña</ion-button>  
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input
+            formControlName="email"
+            type="email"
+            placeholder="email@domain.com"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input
+            formControlName="password"
+            type="password"
+            maxlength="8"
+          ></ion-input>
+        </ion-item>
+        <ion-button type="submit" expand="block">Login</ion-button>
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+      </form>
+      <ion-button fill="clear" routerLink="/register">Registrar</ion-button>
+      <ion-button fill="clear" routerLink="/forgot">Olvidé Contraseña</ion-button>
     </ion-card>
-    
-   
-        
-     
-    
   </div>
 </ion-content>
