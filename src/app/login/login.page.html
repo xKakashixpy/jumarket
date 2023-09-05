@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>LOGIN</ion-title>
+    <ion-title>Inicio Sesion</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
@@ -19,6 +19,21 @@
       alt="Imagen"
       src=""
     />
+    <ion-card class="ion-text-center">
+      <ion-item>
+        <ion-input label="Email" type="email" placeholder="email@domain.com"></ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-input label="Contraseña" type="password" value="0000" maxlength="4"></ion-input>      
+      </ion-item>
+        <ion-button expand="block">Login</ion-button>
+        <ion-button fill="clear">Registrar</ion-button>     
+        <ion-button fill="clear">Olvide Contraseña</ion-button>  
+    </ion-card>
+    
+   
+        
+     
     
   </div>
 </ion-content>
