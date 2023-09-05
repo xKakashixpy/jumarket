@@ -25,11 +25,10 @@ export class RegisterPage {
 
   register() {
     if (this.registerForm.valid) {
-      // El formulario es válido, puedes realizar cualquier otra lógica aquí
-      // Luego, navega a la página de inicio (reemplaza 'home' con tu ruta real)
+    
       this.router.navigate(['/home']);
     } else {
-      // El formulario no es válido, puedes mostrar un mensaje de error o realizar otras acciones
+      
     }
   }
 }
