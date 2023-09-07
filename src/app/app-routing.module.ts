@@ -28,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   },
   {
-    path: 'not-found',
+    path: '**',
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
 ];

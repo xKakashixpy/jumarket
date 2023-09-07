@@ -1,13 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>NotFound</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Error 404</ion-card-title>
+    <ion-card-subtitle>Page Not Found</ion-card-subtitle>
+  </ion-card-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">NotFound</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-card-content>
+    Lo sentimos la pagina que buscas no ha sido encontrada 
+  </ion-card-content>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ion-card>
